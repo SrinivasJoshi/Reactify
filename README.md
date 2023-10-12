@@ -51,21 +51,19 @@ Reactify: Simplifying dApp Creation with the Strength of React and the Agility o
 
 📁 root
 ├── 📁 public
-│ └── 📁 images
 ├── 📁 src
-│ ├── 📁 components
-│ ├── 📁 contracts
-│ ├── 📁 utils
 ├── index.html
 ├── tailwind.config.js
 
-`components` : Reusable React components for the dApp.
+`src`
 
-`contracts` : Store for smart contract references.
+- `components` : Reusable React components for the dApp.
 
-`utils` : Utilities like contract info.Could be potentially used for state management using recoil
+- `contracts` : Store for smart contract references.
 
-- `contractInfo.ts` : smart contract address and ABI
+- `utils` : Utilities like contract info.Could be potentially used for state management using recoil
+
+        -  `contractInfo.ts` : smart contract address and ABI
 
 `index.html` : Main HTML file for the web app, used to add required metadata.
 
