@@ -48,14 +48,15 @@ Reactify: Simplifying dApp Creation with the Strength of React and the Agility o
         npm run format
 
 ## Folder structure
-
-📁 src
-
-├── 📁 components
-
-├── 📁 contracts
-
-├── 📁 utils
+📁 root
+├── 📁 public
+│   └── 📁 images       
+├── 📁 src
+│   ├── 📁 components
+│   ├── 📁 contracts
+│   ├── 📁 utils
+├── index.html
+├── tailwind.config.js
 
 `components` : Reusable React components for the dApp.
 
@@ -64,6 +65,11 @@ Reactify: Simplifying dApp Creation with the Strength of React and the Agility o
 `utils` : Utilities like contract info.Could be potentially used for state management using recoil
 
 - `contractInfo.ts` : smart contract address and ABI
+
+`index.html` : Main HTML file for the web app, used to add required metadata.
+
+`tailwind.config.js` : Tailwind CSS customization file for custom themes, fonts, and colors.
+`public` : Assest folder
 
 ### Additional reads
 
