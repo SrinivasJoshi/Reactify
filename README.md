@@ -51,7 +51,7 @@ Reactify: Simplifying dApp Creation with the Strength of React and the Agility o
 
 📁 root
 ├── 📁 public
-│ └── 📁 images  
+│ └── 📁 images
 ├── 📁 src
 │ ├── 📁 components
 │ ├── 📁 contracts
