@@ -48,13 +48,14 @@ Reactify: Simplifying dApp Creation with the Strength of React and the Agility o
         npm run format
 
 ## Folder structure
+
 📁 root
 ├── 📁 public
-│   └── 📁 images       
+│ └── 📁 images  
 ├── 📁 src
-│   ├── 📁 components
-│   ├── 📁 contracts
-│   ├── 📁 utils
+│ ├── 📁 components
+│ ├── 📁 contracts
+│ ├── 📁 utils
 ├── index.html
 ├── tailwind.config.js
 

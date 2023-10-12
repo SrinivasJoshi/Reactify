@@ -1,9 +1,9 @@
 import { useAccount, useContractRead } from "wagmi";
-import { contractABI, contractAddress } from '../utils/contractInfo'; 
+import { contractABI, contractAddress } from "../utils/contractInfo";
 import { formatUnits } from "ethers";
 
 export default function ContractRead() {
-    const { address } = useAccount();
+  const { address } = useAccount();
   const { data: name } = useContractRead({
     address: contractAddress,
     abi: contractABI,
@@ -20,13 +20,13 @@ export default function ContractRead() {
     address: contractAddress,
     abi: contractABI,
     functionName: "balanceOf",
-    args: [address?address:'0x'],
+    args: [address ? address : "0x"],
     watch: true,
   });
 
   return (
     <>
-    <h2 className="text-white text-xl text-center">
+      <h2 className="text-white text-xl text-center">
         To view the code below, check{" "}
         <span className="bg-zinc-800 p-1 rounded-md">
           <a
@@ -47,9 +47,9 @@ export default function ContractRead() {
         </p>
         <p className="mx-2 text-center p-2 border-2 border-secondary rounded-md">
           Your balance <br />
-          {balance ? formatUnits(balance,0) : "---"}
+          {balance ? formatUnits(balance, 0) : "---"}
         </p>
       </div>
     </>
-  )
+  );
 }

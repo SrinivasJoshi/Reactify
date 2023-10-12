@@ -1,19 +1,18 @@
 import { contractABI, contractAddress } from "../utils/contractInfo";
 import {
-    useAccount,
-    useContractWrite,
-    usePrepareContractWrite,
-    useWaitForTransaction,
-  } from "wagmi";
-
+  useAccount,
+  useContractWrite,
+  usePrepareContractWrite,
+  useWaitForTransaction,
+} from "wagmi";
 
 export default function ContractWrite() {
-    const { isConnected, address } = useAccount();
+  const { isConnected, address } = useAccount();
   const { config } = usePrepareContractWrite({
     address: contractAddress,
     abi: contractABI,
     functionName: "safeMint",
-    args: [address?address:'0x', "yooo"],
+    args: [address ? address : "0x", "yooo"],
   });
 
   const { write, data } = useContractWrite(config);
@@ -24,7 +23,7 @@ export default function ContractWrite() {
 
   return (
     <>
-    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <h2 className="text-white text-xl mb-3 text-center">
           To view the code below, check{" "}
           <span className="bg-zinc-800 p-1 rounded-md">
@@ -53,8 +52,8 @@ export default function ContractWrite() {
           <div className="flex justify-center items-center mt-3">
             <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-secondary"></div>
           </div>
-           )}
-           </div>
+        )}
+      </div>
     </>
-  )
+  );
 }
